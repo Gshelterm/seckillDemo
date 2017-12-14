@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--config-->
+    <settings>
+        <setting name="userGeneratedKeys" value="true"></setting>
+        <!--列别名转换 默认:true
+            select name as title from table
+        -->
+        <setting name="userColumnLabel" value="true"></setting>
+        <!--驼峰命名转换-->
+        <setting name="maoUnderscoreCamelcase" value="true"></setting>
+    </settings>
+</configuration>
