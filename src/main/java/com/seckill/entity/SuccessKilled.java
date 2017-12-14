@@ -9,7 +9,7 @@ public class SuccessKilled {
     private Date createTime;
 
     // 多对一
-
+    private Seckill seckill;
 
 
     public Seckill getSeckill() {
@@ -20,7 +20,7 @@ public class SuccessKilled {
         this.seckill = seckill;
     }
 
-    private Seckill seckill;
+
 
     public long getSeckillId() {
         return seckillId;

@@ -3,10 +3,10 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<!--sql mapper for SeckillDao interface-->
+<!--sql mapper for SeckillDao.xml interface-->
 <mapper namespace="com.seckill.dao.SeckillDao">
     <update id="reduceNumber">
-      UPDATE seckill set numbe = number-1
+      UPDATE seckill set number = number-1
       WHERE seckill_id = #{seckillId}
       and start_time <![CDATA[   <=  ]]> #{killTime}
       and end_time >= #{killTime}
@@ -14,15 +14,14 @@
     </update>
 
     <select id="queryById" parameterType="long" resultType="Seckill">
-        SELECT seckill_id, name, number, satrtTime, endTime, createTime
+        SELECT seckill_id, name, number, start_time, end_time, create_time
         from seckill
         WHERE seckill_id = #{seckillId}
     </select>
 
     <select id="queryAll" resultType="Seckill">
-        SELECT seckill_id, name, number, satrtTime, endTime, createTime
+        SELECT seckill_id, name, number, start_time, end_time, create_time
         from seckill
-        WHERE seckill_id = #{seckillId}
         ORDER BY create_time DESC
         limit #{offset}, #{limit}
     </select>

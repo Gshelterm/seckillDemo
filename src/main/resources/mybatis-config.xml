@@ -5,12 +5,12 @@
 <configuration>
     <!--config-->
     <settings>
-        <setting name="userGeneratedKeys" value="true"></setting>
+        <setting name="useGeneratedKeys" value="true"></setting>
         <!--列别名转换 默认:true
             select name as title from table
         -->
-        <setting name="userColumnLabel" value="true"></setting>
+        <setting name="useColumnLabel" value="true"></setting>
         <!--驼峰命名转换-->
-        <setting name="maoUnderscoreCamelcase" value="true"></setting>
+        <setting name="mapUnderscoreToCamelCase" value="true"></setting>
     </settings>
 </configuration>
