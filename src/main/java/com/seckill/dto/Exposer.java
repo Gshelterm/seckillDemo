@@ -5,6 +5,7 @@ package com.seckill.dto;
  */
 public class Exposer {
     // if start sec kill
+    // 是否开启秒杀
     private Boolean exposed;
 
     private String md5;

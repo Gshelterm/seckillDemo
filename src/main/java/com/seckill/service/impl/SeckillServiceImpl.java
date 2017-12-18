@@ -5,6 +5,7 @@ import com.seckill.dao.SeckillDao;
 import com.seckill.dao.SuccessKilledDao;
 import com.seckill.dto.Exposer;
 import com.seckill.dto.SeckillExecution;
+import com.seckill.dto.SeckillResult;
 import com.seckill.entity.Seckill;
 import com.seckill.entity.SuccessKilled;
 import com.seckill.exception.RepeatKillException;
@@ -34,7 +35,7 @@ public class SeckillServiceImpl implements SeckillService{
     private final String salt = "sfbfj^!@*&HY&*4i3y89fyis*(&*^$@90w3ur8923u54";
 
     public List<Seckill> getSeckillAll() {
-        return seckillDao.queryAll(0, 4);
+        return seckillDao.queryAll(0, 5);
     }
 
     public Seckill getSeckill(long seckillId) {
@@ -107,4 +108,5 @@ public class SeckillServiceImpl implements SeckillService{
             throw new SeckillException("seckill inner error: " + e.getMessage());
         }
     }
+
 }
